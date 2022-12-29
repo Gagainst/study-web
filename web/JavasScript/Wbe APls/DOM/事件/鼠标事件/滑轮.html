@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            background-color: palegreen;
+        }
+    </style>
+    <script>
+        window.onload =function(){
+            var box1 = document.querySelector('.box1');
+            //滚轮事件onmousewheel 但是不支持火狐浏览器
+            box1.onmousewheel = function(event){
+               event = event || window.event;
+               //event.wheelDelta 向下滚是-120 向上是120 不要看数值 主要是看正负
+               if(event.wheelDelta > 0 ){
+                    box1.style.height = box1.clientHeight - 20+'px';
+               }else{
+                box1.style.height = box1.clientHeight + 20+'px';
+               }
+               //取消浏览器默认行为
+               return false;
+            };
+            
+        };
+   </script>
+</head>
+<body style="height: 2000px;">
+    <div class="box1"></div>
+</body>
+</html>

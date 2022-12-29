@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.bilibili.com/">B站</a>
+    <script>
+        var a = document.querySelector('a');
+        // a.addEventListener('click',function(event){
+        //     event.preventDefault();//阻止默认跳转 例如a 不跳转
+        // });
+        a.onclick = function(event){
+            //普通浏览器 event.preventDefault(); 是属于 方法
+            event.preventDefault();
+            //老版本浏览器 ie678 event.returnValue 是属于 属性
+            event.returnValue;
+        }
+    </script>
+</body>
+</html>

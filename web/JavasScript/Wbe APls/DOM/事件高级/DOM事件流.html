@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: purple;
+        }
+
+        .s {
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            width: 160px;
+            height: 160px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DOM事件流 有两个阶段 捕获阶段  冒泡阶段 
+         捕获阶段是从上往下执行寻找（寻找的是事件 例如click 点击事件）
+         冒泡阶段是从小往上执行寻找（寻找的是事件 例如click 点击事件）
+    -->
+    <div class="f">
+        <div class="s"></div>
+    </div>
+    <script>
+        var f = document.querySelector('.f');
+        var s = document.querySelector('.s');
+        //捕获阶段 addEventListener 第三个参数 如果是true 那么则处于捕获阶段 
+        //捕获循序 document -> html -> body ->f -> s
+        f.addEventListener('click',function(){
+            alert('f')
+        },true)
+        s.addEventListener('click',function(){
+            alert('s')
+        },true)
+        //冒泡阶段 addEventListener 第三个参数 如果是false或者为空 那么则处于冒泡阶段
+        //冒泡循序 s -> f -> body -> html -> document
+        f.addEventListener('click',function(){
+            alert('f')
+        },false)
+        s.addEventListener('click',function(){
+            alert('s')
+        },false) 
+    </script>
+</body>
+
+</html>

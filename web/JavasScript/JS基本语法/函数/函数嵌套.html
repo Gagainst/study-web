@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function  fu1 () {
+        //     console.log(12);//先打印12
+        //     fu2();//调用了函数fu2 执行fu2里面的代码
+        //     console.log('fu1');//执行完fu2 在打印fu1
+        // }
+        // function  fu2 () {
+        //     console.log(13);
+        //     console.log('fu2');
+        // }
+        // fu1();//输出结果为：12 13 fu2 fu1
+        //案例    
+        function backDay() {
+            var enter = prompt("请输入年份：");
+            if(isRunYear(enter)) {
+                alert("是闰年2月有29天");
+            }
+            else{
+                alert("是平年2月有28");
+            }
+        }
+        backDay();
+        function isRunYear(enter) {
+            var a = false;
+            if (enter % 4 == 0 && enter % 100 != 0 || enter % 400 == 0) {
+                a = true;
+            }
+            return a;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //遍历数组：就是把数组元素从头到尾都访问一遍
+        //如何把所以的数组都打印一遍呢  用for循环
+        var arr = [1, 2, 3, 4, 5]
+        for (var i = 0; i < 4; i++)//数组是从0开始的 所以i要为0
+        {
+            console.log(arr[i]);//输出的时候arr[i]  i当下标来用 就可以了
+        }
+        //案例:将['关羽','张飞','黄忠','马超','赵云']里面的元素打印到控制台上
+        var arr1 = ['关羽', '张飞', '黄忠', '马超', '赵云']
+        for (var i = 0; i < 4; i++) {
+            console.log(arr1[i]);
+        }
+
+
+        //数组长度：数组名.length
+        console.log(arr1.length);
+        var arr1 = ['关羽', '张飞', '黄忠', '马超', '赵云']
+        for (var i = 0; i < arr1.length; i++) {
+            console.log(arr1[i]);
+        }
+        //相当于上面的用arr1.length的好处：
+        //1.数组长度是数组元素的个数  不是下标
+        //2.arr1.length可以动态监测数组元素的个数 
+
+        //案例：把数组元素1 7 6 5 9的和以及平均值
+        var arr = [1,7,6,5,9,15]
+        var sun = 0;
+        for (var i = 0; i<arr.length;i++) {
+            sun +=arr[i]
+        }
+        console.log(sun);
+        console.log(sun/arr.length);
+        //案例：数组[5, 58, 100, 544, 19]打印出最大的
+        var arr = [5, 58, 100, 544, 19];
+        var temp = arr[0];
+        for (var i = 1; i <= arr.length; i++) {  
+            if (arr[i] > temp) {
+                temp = arr[i]
+            }
+        }
+        console.log(temp);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

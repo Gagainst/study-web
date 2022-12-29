@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数参数分为：形参  实参
+        function loop(num1,num2) {//形参是小括号里面的（形式上的参数）
+            var sun = 0;
+            for (var i = num1; i <= num2; i++) {
+                sun+=i
+             }
+             console.log(sun);
+        }
+        loop (10,100);//实参是在调用函数小括号里面的 （实际的上参数）
+
+
+         //函数参数 是可以传输任何数据类型的 包括object
+         function fun (o) {
+            //o相当于obj 因为实参传递过来的就是obj  就相当于obj.name 
+            console.log( '我叫:'+o.name+'\t我来自:'+o.emil+'\t我今年:'+o.age+'\t性别:'+o.gerder);
+        }
+        var obj = {
+            name:'韩信',
+            gerder:'男',
+            age:'18',
+            emil:'中国'
+        }
+        console.log(fun(obj))
+
+
+        //函数参数 是可以传输函数
+        function fun2 (a){
+            a(obj);
+        }
+        fun2(fun);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

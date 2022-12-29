@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //keydown 是按下某个键触发 能识别特殊键 例如ctrl shift 左右箭头等等 
+        document.addEventListener('keydown',function(){
+            console.log('我按下了down');
+        })
+        //keypress 是按下某个键触发 不能识别特殊键 例如ctrl shift 左右箭头等等
+        document.addEventListener('keypress',function(){
+            console.log('我按下了 press');
+        })
+        //keydown执行顺序是在keypress前面
+    </script>
+</body>
+</html>

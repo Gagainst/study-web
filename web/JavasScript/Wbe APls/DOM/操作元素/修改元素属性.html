@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 640px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="ys">亚索</button>
+    <button id="rw">瑞文</button><br>
+    <img src="images/rwandya.jpg" alt="" title="瑞文和亚索">
+
+    <script>
+        var ys = document.getElementById('ys');
+        var rw = document.getElementById('rw');
+        var img = document.querySelector('img');
+        ys.onclick = function () {
+            img.src = 'images/ys.jpg';
+            img.title = '死亡如风，常伴吾身';
+        }
+        rw.onclick = function(){
+            img.src='images/rw.jpg';
+            img.title = '前车之鉴，后车之师';
+        }
+    </script>
+</body>
+
+</html>

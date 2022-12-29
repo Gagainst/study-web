@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //逻辑运算符（返回值是布尔型）
+        //&&（与） 两个都是ture 返回结果就是ture 其中一个是错的就是flase
+        console.log(5 > 10 && 10 > 5); //flase
+        console.log(5 < 10 && 10 > 5); //ture
+        //||（或） 两个都是flase 那么就是flase   其中一个是ture 返回的结果就是ture  
+        console.log(5 > 10 || 10 > 5); //ture
+        console.log(5 == 10 || 5 > 10); //flase
+        //！（非）非flase为ture 非ture为flase
+        console.log(!false);
+
+
+        //逻辑中断（重点）
+        
+        //逻辑&&（与）中断运算  如果表达式1是true  则返回表达式2  如果表达式1是false 则返回表达式1（假值有0 '' null undefined NaN 其他为真）
+        console.log(4511 && 1444); //值1444
+        console.log(0 && 1555); //值0
+        //逻辑||（或）中断运算  如果表达式1是true  则返回表达式1  如果表达式1是false 则返回表达式2（假值有0 '' null undefined NaN 其他为真）
+        console.log(4511 || 1444); //值4511
+        console.log(0 || 1555); //值1555
+
+
+
+        //案例
+        var nub = 0;
+        console.log(1 || mun++); //返回值为1
+        console.log(nub); //值0 因为在逻辑或中断里面表达式1为真 那么就返回表达式1，nub++是没有进行计算的 所以值为0
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

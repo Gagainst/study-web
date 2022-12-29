@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //反转数组
+        function reverse(arr) {//reverse 反转
+            var newArr = [];//定义一个新的数组
+            for (var i = arr.length - 1; i >= 0; i--)//i=arr.length-1：因为旧数组的最后一个值（下标从0开始）要变成新数组第一个值 
+            {
+                newArr[newArr.length] = arr[i];//newArr[newArr.length]:因为定义的空数组的是从0开始的 由于i-- 所以旧数组下标会赋值给新数组
+            }
+            return newArr;
+        }
+        var unt = reverse([1, 2, 3, 4, 5]);
+        console.log(unt);
+        //封装冒泡排序
+        function sort(arr) {//sort 排序
+            for (var i = 0; i <= arr.length; i++) {
+                for (var j = 0; j <= arr.length - i - 1; j++) {
+                    if(arr[j]<arr[j+1]){
+                        var temp;
+                        temp=arr[j+1];
+                        arr[j+1]=arr[j];
+                        arr[j]=temp;
+                }
+            }
+        }
+        return arr;
+    }
+    var unt = sort([1, 2, 3, 4, 5]);
+        console.log(unt);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

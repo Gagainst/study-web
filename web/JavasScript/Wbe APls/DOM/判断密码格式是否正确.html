@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: relative;
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        .box input {
+            outline: none;
+            border: 1px #999 solid;
+        }
+
+        .box label {
+            font-size: 13px;
+            color: #000;
+
+        }
+
+        .box p {
+            position: absolute;
+            top: -2px;
+            left: 220px;
+            font-size: 10px;
+        }
+        .word{
+            color: red;
+        }
+        .rith {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="">设置密码</label>
+        <input type="password" class="ipt">
+        <p class="mess">6-16位字符(字母，数字，符号)，区分大小写</p>
+    </div>
+    <script>
+        //获取元素 
+        var ipt = document.querySelector('.ipt');
+        var mess = document.querySelector('.mess');
+        //注册事件 失去焦点事件  程序处理
+        ipt.onblur = function () {
+            if (ipt.value.length < 6 || ipt.value.length > 16) {
+                mess.className = 'mess word'
+                mess.innerHTML = '你输入的位数不对 请输入6-16位'
+            }else{
+                mess.className = 'mess rith'
+                mess.innerHTML = '输入正确'
+            }
+        }
+    </script>
+</body>
+
+</html>

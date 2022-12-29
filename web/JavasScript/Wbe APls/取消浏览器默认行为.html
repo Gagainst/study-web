@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function() {
+      const a = document.querySelector('a');
+      a.addEventListener('click',function(even){
+        //even.preventDefault() 取消默认行为 IE浏览器不支持
+        even.preventDefault()
+        // IE浏览器使用return false
+        // return false
+      });
+    }
+  </script>
+</head>
+<body>
+  <a href="#">大苏打撒旦</a>
+</body>
+</html>

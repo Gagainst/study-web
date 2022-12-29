@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .maxbox {
+            margin: 100px auto;
+            width: 500px;
+        }
+
+        .headbox {
+            height: 40px;
+            background-color: rgb(233, 231, 231);
+            border-bottom: red 1px solid;
+        }
+
+        .headbox ul li {
+            float: left;
+            padding: 0 30px;
+            line-height: 40px;
+        }
+
+        .bodybox {
+            font-size: 12px;
+        }
+
+        .aa {
+            background-color: red;
+            color: #fff;
+        }
+
+        .time {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maxbox">
+        <div class="headbox">
+            <ul>
+                <li class="aa">产品介绍</li>
+                <li>产品展示</li>
+                <li>评论</li>
+                <li>售后服务</li>
+            </ul>
+        </div>
+        <div class="bodybox">
+            <div class="time" style="display: block;">产品介绍内容</div>
+            <div class="time"> 产品展示内容</div>
+            <div class="time">评论内容</div>
+            <div class="time">售后服务内容</div>
+        </div>
+    </div>
+    <script>
+        //使用 排他思想
+        //获取元素
+        var headbox = document.querySelector('.headbox');
+        var lis = headbox.querySelectorAll('li');
+        var times = document.querySelectorAll('.time');
+        // for循环注册事件
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].setAttribute('index',i);
+            lis[i].onclick = function () {
+                //干掉所有人 去除所有li的class
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                }
+                //留下我自己 点击那个li 就给他赋值 aa
+                this.className = 'aa';
+                var index = this.getAttribute('index');
+                console.log(index);
+                for(var i = 0;i<lis.length;i++){
+                    times[i].style.display='none';
+                }
+                times[index].style.display = 'block';
+            }
+        }
+    </script> 
+</body>
+
+</html>

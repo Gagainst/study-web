@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 委托事件原理（重点）：不是设置在子节点上 而是设置在父节点上 利用冒泡原理来影响每个子节点 -->
+    <!-- 委托事件的作用：只调用了一次dom 提高了代码执行效率 -->
+      <ul>
+        <li>1死亡如风，常伴无声!</li>
+        <li>2死亡如风，常伴无声!</li>
+        <li>3死亡如风，常伴无声!</li>
+        <li>4死亡如风，常伴无声!</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function(event){
+            alert('死亡如风，常伴无声');
+             console.log(event.target);
+        });
+    </script>
+</body>
+</html>

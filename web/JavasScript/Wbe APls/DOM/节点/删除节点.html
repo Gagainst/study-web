@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <ul>
+        <li>老大</li>
+        <li>老二</li>
+        <li>老三</li>
+    </ul>
+    <script>
+        //获取元素
+        var ul = document.querySelector('ul');
+        var but = document.querySelector('button')
+        //删除节点：父节点.removeChild(子节点);
+          //ul.removeChild(ul.children[0]);
+        //注册事件 代码执行 按下按钮 依次删除
+        but.onclick = function (){
+            if(ul.children.length == 0){
+                this.disabled = 'none'; //让按钮失去效果
+            }else{
+                ul.removeChild(ul.children[0]);
+            }
+        }
+    </script>
+</body>
+</html>

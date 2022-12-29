@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //比较运算符（返回值是布尔型）
+        console.log(10 !== 10); //flase 
+        console.log(10 > 10); //flase
+        console.log(10 < 50); //ture
+        console.log(10 == '10'); //ture 等于是值相等就是对的
+        console.log(10 === '10'); //flase 全等是值相等 数据类型相等 才是对的
+        //1.在比较两个字符串的时候 是比较的unicode码值
+        console.log('123'>'31'); //false
+        //2.在比较两个字符串的时候 是一位一位的进行比较
+        console.log('123'<'31'); //true
+        //3.在比较两个数字字符串的时候 必须要转为数字型 （方法是加一个 + ）
+        console.log('123'> +'31'); // +'31'
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

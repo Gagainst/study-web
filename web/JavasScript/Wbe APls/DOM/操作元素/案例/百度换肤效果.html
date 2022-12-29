@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background:url(../images/img1.jpeg) no-repeat center top;   
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .skin {
+        margin: 50px auto;
+        background-color: #fff;
+        width: 410px;
+    }
+
+    .skin li {
+        float: left;
+        margin: 0 1px;
+        /* 把鼠标箭头改成小手 */
+        cursor: pointer;
+    }
+
+    .skin img {
+        width: 100px;
+    }
+
+
+</style>
+
+<body>
+    <ul class="skin">
+        <li><img src="../images/img1.jpeg" alt=""></li>
+        <li><img src="../images/img2.jpeg" alt=""></li>
+        <li><img src="../images/img3.jpeg" alt=""></li>
+        <li><img src="../images/img4.jpeg" alt=""></li>
+    </ul>
+    <script>
+        //获取元素
+        var imgs = document.querySelector('.skin').querySelectorAll('img');
+        //循环注册元素 程序执行
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {s
+                //this.src 获取点击图片的地址
+                //console.log(this.src);
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+
+</html>

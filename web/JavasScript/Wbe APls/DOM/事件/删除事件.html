@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function () {
+      const btn = document.querySelector('.btn');
+      /*
+        用onclick绑定事件
+          使用btn.onclick = null取消
+      */
+      // btn.onclick = function() {
+      //   alert('a')
+      // }
+      // btn.onclick = null
+
+
+
+
+
+      /*
+       使用addEventListener绑定事件
+         通过removeEventListener()移出事件，需要注意两点：
+             1、removeEventListener()的第三个参数必须和addEventListener()方法的第三个参数一致。
+             2、通过addEventListener()方法添加的匿名函数将无法移除。
+     */
+      // 无效删除 
+      // 因为addEventListener和removeEventListener传入的函数不是一个函数
+      btn.addEventListener('click', event => alert('a'), false)
+      btn.removeEventListener('click', event => alert('a'), false)
+
+      // 有效删除
+      let fun = event => alert('a')
+      btn.addEventListener('click', fun, false);
+      btn.removeEventListener('click', fun, false);
+    }
+  </script>
+</head>
+
+<body>
+  <button class="btn">dasdas</button>
+</body>
+
+</html>

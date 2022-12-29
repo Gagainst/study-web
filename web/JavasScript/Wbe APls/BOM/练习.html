@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var inputTime = +new Date('20121-11-17 24:00:00');
+        function getTime() {
+            var onwTime = +new Date();
+            var times = (onwTime - inputTime) / 1000;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            return s;
+        }
+        console.log(getTime());
+    </script>
+</body>
+
+</html>

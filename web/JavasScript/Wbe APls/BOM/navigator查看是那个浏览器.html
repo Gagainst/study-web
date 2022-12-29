@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //判断使用的是那个浏览器 navigator.userAgent
+        window.onload = function() {
+            // edg浏览器 
+            // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.52
+            //火狐浏览器 
+            //Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0
+            //谷歌浏览器
+            //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36
+            if(/firefox/i.test(navigator.userAgent)){
+                alert('火狐浏览器');
+            }else if(/chrome | edg/i.test(navigator.userAgent)){
+                alert('edge浏览器')
+            }else if(/chrome/i.test(navigator.userAgent)){
+                alert('谷歌浏览器');
+            }
+            
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

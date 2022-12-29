@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>事件对象</div>
+    <script>
+        //event 就是一个事件对象 写在监听函数 小括号后面  可以理解为形参 但是不用传递实参
+        //事件对象 首先要是事件 才会有事件对象 他是系统自动给我们创建的  
+        //事件对象 是一系列事件相关数据的集合 例如click 点击事件 那么事件对象就是鼠标的相关数据 点击的坐标等等
+        var divs = document.querySelector('div');
+        divs.addEventListener('click',function(event){
+            console.log(event);
+        });
+        //事件对象兼容性问题 ie6-8是要通过window.event 兼容性问题解决方法 event=event || window.event   
+         </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Array.isArray(); 检测是否为数组 是数组 返回true 否则返回false
+        var arr = [1,2,3];
+        console.log(Array.isArray(arr));//true
+        var obj= {};
+        console.log(Array.isArray(obj));//false
+        //可以用来判断 例如if
+        if(Array.isArray(obj)){
+            console.log("我是数组");
+        }else{
+            console.log("我不是数组");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

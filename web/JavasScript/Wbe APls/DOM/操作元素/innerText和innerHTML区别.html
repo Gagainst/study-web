@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <p id="p1">
+           我是文字
+           <span>123</span>
+    </p>
+    <p id="p2">
+        我是文字
+        <span>123</span>
+ </p>
+    <script>
+        //innerText 和 innerHTML 区别
+        //1.innerText： 非标准   
+        var div1 = document.getElementById('div1');
+        div1.innerText='我看我自己都<strong>上火</strong>';//不识别html标签
+        var p1 = document.getElementById('p1');
+        console.log(p1.innerText);//去除空格和换行
+        //2.innerHTML: W3C标准（常用）
+        div2.innerHTML='我看我自己都<strong>上火</strong>';//识别html标签
+        var p2 = document.getElementById('p2');
+        console.log(p2.innerHTML);//保留空格和换行
+    </script>
+</body>
+</html>

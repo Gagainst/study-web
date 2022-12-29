@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //有的时候 我们要创建多个对象的时候 要一一复制 就很麻烦 构造函数就可以帮我们解决这个问题
+        // 构造函数 我们也通常称为 类 class
+        //构造函数格式
+        function 函数名() {//创建构造函数
+            this.属性 = 属性值;
+            this.方法 = function () {
+            }
+        }
+        
+        //调用构造函数这个过程我们也称为 类的实例
+        var 变量名 = new 函数名();//调用构造函数
+        输出(变量名.属性名) 
+        //案例
+        function Str(uname, age, sex) {
+            this.name = uname;
+            this.sex = sex;
+            this.age = age;
+        }
+        Str.prototype.sing = function (sang) {
+                console.log(sang);
+            }
+        var hx = new Str('韩信', 20, "男");
+        console.log(hx.name);//调用是this后面的属性名或者方法名 
+        hx.sing('谢谢')
+        var ldh = new Str('刘德华', 19, '男');
+        console.log(ldh.age);
+        ldh.sing('冰雨');
+        //  instanceof 是判断ldh 是不是 Game的实例 如果是则返回 true 否则返回false
+        console.log(ldh instanceof Str)
+        //1 首字母要大写 
+        //2 构造函数可以不用return 就可以返回值
+        //3 要用构造函数 要使用new
+        //4 只要new Str() 调用函数就是创建了一个对象
+        //5 属性和方法前面必须添加 this
+
+
+        //练习
+        function Game(name, tpye, blood, attack) {
+            this.name = name;
+            this.tpye = tpye;
+            this.blood = blood;
+            this.attack = attack;
+        }
+        var hy = new Game('后羿', '射手', '500血', '远程');
+        console.log(hy.name);
+        var lp = new Game("廉颇", "坦克", "1000血", "近战");
+        console.log(lp.attack);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

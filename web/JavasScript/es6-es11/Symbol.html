@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Symbol 他具有唯一性
+      //创建一个Symbol 方法一
+      var sym = Symbol();
+      //方法二
+      var sym2 = Symbol.for();
+      //判断 两个Symbol数据是否相对 用Symbol.for()
+      console.log(typeof sym);
+      console.log(typeof sym2);
+
+      //Symbol 不可以运算和比较 会直接报错
+      // console.log(sym2 > sym)
+      // console.log(sym2 + sym)
+      
+      // 在对象中命名Symbol格式 使用[]
+      const obj4 = {
+        name:'aa',
+        [Symbol()]:'18'
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var box1 = document.querySelector('.box1');
+            document.onkeydown = function (event) {
+                event = event || window.event;
+                var temp = 20;
+                //判断是否按下了shift 如果按了 加速
+                if(event.shiftKey){
+                    temp = 50;
+                }else if(event.ctrlKey){
+                    temp = 10;
+                }
+                //左37 上38 右39 下40
+                switch (event.keyCode) {
+                    case 37:
+                        box1.style.left = box1.offsetLeft - temp + 'px';
+                        break;
+                    case 38:
+                        box1.style.top = box1.offsetTop - temp + 'px';
+                        break;
+                    case 39:
+                        box1.style.left = box1.offsetLeft + temp + 'px';
+                        break;
+                    case 40:
+                        box1.style.top = box1.offsetTop + temp + 'px';
+                        break;
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div class="box1"></div>
+</body>
+
+</html>

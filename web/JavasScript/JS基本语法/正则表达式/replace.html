@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+    replace('被替换的内容','替换的内容'):
+            替换指定的内容
+            默认情况下 只替换第一个满足条件的 
+            我们可以使用g（全局匹配模式）来让replace检查所有的内容
+    替换内容可以为空 那么相当于删除被替换内容  
+*/
+        var str = '1a2b3c4d5f6g7';
+        var value = str.replace(/[a-z]/ig, '');
+        console.log(value)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

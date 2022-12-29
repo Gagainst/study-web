@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            使用onclick回调函数封装myClick函数里面
+                IdStr：将需要绑定单击事件的id名付给IdStr
+                fun：事件的回调函数 单价元素时  该函数触发
+        */
+        function myClick(IdStr, fun) {
+            var btn = document.getElementById(IdStr);
+            btn.onclick = fun;
+        };
+        window.onload = function () {
+            myClick("btn1", function () {
+                alert('123');   
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+
+</body>
+
+</html>

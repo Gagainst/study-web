@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li {
+      list-style: none;
+      float: left;
+      width: 50px;
+      height: 50px;
+      border: 1px solid pink;
+      margin-left: 10px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const ul = document.querySelector('ul');
+      let lis = ul.children;
+      let index = 0;
+      setInterval(function () {
+        for (let i = 0; i < lis.length; i++) {
+          lis[i].style.backgroundColor = '';
+        }
+        lis[index].style.backgroundColor = 'black';
+        index++;
+        if (index >= lis.length) {
+          index = 0;
+        }
+      }, 1000)
+
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
+</html>

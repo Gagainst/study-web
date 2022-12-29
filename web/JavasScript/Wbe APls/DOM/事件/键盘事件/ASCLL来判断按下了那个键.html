@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //我们可以利用ASCLL码值来判断按下了那个键 event.keyCode转换ASCLL码值
+        //keyup 和 keydown 是不区分大小写的 keypress区分大小写 
+        document.addEventListener('keyup',function(event){
+            console.log('keyup是：' + event.keyCode);
+        })
+        document.addEventListener('keypress',function(event){
+            console.log('keypress是：' + event.keyCode);
+        })
+    </script>
+</body>
+</html>

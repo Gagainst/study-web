@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 问题：互换变量
+        /*   思路：1.首先定义一个临时变量来来帮助我们 temp
+                  2.把app1给临时变量 temp
+                  3.把app2给app1
+                  4.然后temp给app2
+                  5.打印出来
+        */
+        var temp;
+        var app1 = '红苹果';
+        var app2 = '青苹果';
+        temp = app1;
+        app1 = app2;
+        app2 = temp;
+        console.log(app1);
+        console.log(app2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

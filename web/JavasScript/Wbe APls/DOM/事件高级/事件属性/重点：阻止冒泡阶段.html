@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: purple;
+        }
+
+        .s {
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            width: 160px;
+            height: 160px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="f">
+        <div class="s"></div>
+    </div>
+    <script>
+        var f = document.querySelector('.f');
+        var s = document.querySelector('.s');
+        s.addEventListener('click',function(event){
+            alert('s')
+            //阻止冒泡 event.stopPropagation(); 属于方法带括号   ie9以上
+            event.stopPropagation();
+            //阻止冒泡 event.cancelBubble;      属于属性不带括号 ie678
+            event.cancelBubble; 
+        })
+        f.addEventListener('click',function(event){
+
+            alert('f')
+        })
+        document.addEventListener('click',function(event){
+            alert('document')
+        })
+    </script>
+</body>
+</html>

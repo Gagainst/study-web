@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        原型对象（portotype）是隐藏的空间 
+        __porto__可以去访问隐藏的原型属性
+            我们同一个构造函数的实例是可以直接调用这个空间的，
+            我们将同一的内容可以放在原型对象里面
+        当我们去访问原型对象的时候 那么他首先是去本身寻找 如果找到直接调用
+            如果没有那么则会去原型对象里面寻找 如果找到直接调用
+        我们可以把同一的方法和属性 统一添加到原型对象里面
+        
+        */
+        function MyName() {
+
+        };
+        //向MyName中的原型添加一个属性a
+        MyName.prototype.a = 123;
+        //向MyName中的原型添加一个方法
+        MyName.prototype.sayName = function() {
+            console.log('hx')
+        }
+        var mn = new MyName();
+        var mn2 = new MyName();
+        
+        mn2.a = 456;
+        //我们去调用这个a
+        //我们没有给mn添加属性a 但是他可以输出a 由此可以得出同一类的实例 是可以去原型对象中调用属性和方法
+        console.log(mn.a) //结果为123 
+        
+        //我们在原型对象和mn2都创建了一个属性a 但是mn2他调用的是456 那么我可以得出 首先先去本身去找 有没有a属性如有就输出 没有在去原型对象中找 在输出
+        console.log(mn2.a) //结果为456
+        //方法也是一样 
+        mn.sayName();
+
+        // 案例
+        function People (name,age,gender) {
+            this.name = name,
+            this.age = age,
+            this.gender = gender
+        }
+        People.prototype.sayName = function(){
+            console.log('我叫'+this.name)
+        }
+        var ldh = new People('刘德华',18,'男');
+        console.log(ldh.age)
+        ldh.sayName();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

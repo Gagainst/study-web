@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>无敌是多么的寂寞</li>
+        <li>无敌是多么的寂寞</li>
+        <li>无敌是多么的寂寞</li>
+        <li>无敌是多么的寂寞</li>
+    </ul>
+    <ol id="ol">
+        <li>奈何无上荣光</li>
+        <li>奈何无上荣光</li>
+        <li>奈何无上荣光</li>
+        <li>奈何无上荣光</li>
+    </ol>
+    <script>
+        //返回的是 获取过来的元素对象的集合 以伪数组形式来存储
+        var lis = document.getElementsByTagName("li");
+        console.log(lis);
+        console.log(lis[0]);//输出单个元素
+        //如果想要依次打印里面的元素对象 可以用遍历的方式来
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        //如果只有一个li或没有 那么他们都会返回伪数组
+        //我们要获取ol 里面的li
+        var ols = document.getElementById('ol');
+        console.log(ols.getElementsByTagName('li'));
+    </script>
+</body>
+
+</html>

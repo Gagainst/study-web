@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 140px;
+            height: 140px;
+            background-color: pink;
+            position: absolute;
+        }
+
+        .box2 {
+            width: 140px;
+            height: 140px;
+            background-color: red;
+            position: absolute;
+            left: 200px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /*
+                第一步 我按下box1 onmousedown 
+                第二步 让box1跟随我鼠标移动 onmousemove
+                第三步 当我松开的时候 box1停在当前位置 onmouseup
+            */
+            var box1 = document.querySelector('#box1');
+            var box2 = document.querySelector('.box2');
+            var images = document.querySelector('.images');
+            setdrag(box1);
+            setdrag(box2);
+            setdrag(images)
+        };
+        //将拖拽封装到setdrag函数里面
+        function setdrag(obj) {
+            // 第一步 我按下box1 onmousedown 
+            obj.onmousedown = function (event) {
+                //当我点击box 那么鼠标就在那个位置
+                //公式： event.pageX - box.offsetTop
+                var top = event.pageX - obj.offsetLeft;
+                var left = event.pageY - obj.offsetTop;
+                // 第二步 让box1跟随我鼠标移动 onmousemove
+                document.onmousemove = function (event) {
+                    event = event || window.event;
+                    var x = event.pageX - top;
+                    var y = event.pageY - left;
+                    obj.style.left = x + 'px';
+                    obj.style.top = y + 'px';
+                };
+                // 第三步 当我松开的时候 box1停在当前位置 onmouseup
+                document.onmouseup = function () {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                };
+                //当我们拖拽网页中的内容的时候 浏览器会默认去搜索 此时会发生拖拽内容异常 
+                //我们可以通用return false 来取消 
+                return false;
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <p>撒大苏打撒</p>
+    <div id="box1"></div>
+    <div class="box2"></div>
+    <img src="../images/xhr.gif" alt="" class = "images" style="position: absolute;">
+</body>
+
+</html>

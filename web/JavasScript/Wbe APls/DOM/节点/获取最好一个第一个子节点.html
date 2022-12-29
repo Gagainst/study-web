@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var uls = document.querySelector('ul');
+        //方法一 :uls.firstChild  他获取是第一个（最后一个）子节点 有可能是文本节点 元素节点
+        console.log(uls.firstChild);//获取第一个
+        console.log(uls.lastChild);//获取最后一个
+
+        
+        //方法二：uls.firstElementChild 获取是第一个（最后一个）元素节点  但是有兼容性问题 ie9以上
+        console.log(uls.firstElementChild);//获取第一个
+        console.log(uls.lastElementChild);//获取最后一个
+
+
+        //实际开发常用 方法三  既没有兼容性问题 也可以返回第一个元素节点
+        console.log(uls.children[0]);//获取第一个
+        console.log(uls.children[uls.children.length - 1]);//获取最后一个
+    </script>
+</body>
+
+</html>

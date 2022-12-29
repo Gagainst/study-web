@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //语法格式 window.setInterval(函数,倒计时);
+        //setInterval 时间到了 重复调用这个函数
+       var times1 =  setInterval(function () {
+            console.log(times1);
+        }, 1000);
+        //语法格式 window.setTimeout(函数,倒计时);
+        //setTImeout 时间到了  只会调用一次这个函数
+       var times2 =  setTimeout(function(){
+            console.log(times2);
+        },1000)
+        //1.window是可以省略的
+        //2.setTimeout 只可以使用一次 相对于炸弹爆炸 就没了
+        //3.时间单位是毫秒 1000毫秒=1秒 不用跟单位
+        //4.页面中一般有很多的定时器 我们一般会给定时器赋一个变量 
+        //5.这个变量会返回一个数值 第一个定时器返回的是1 第二个返回的是2 .....
+    </script>
+</body>
+
+</html>

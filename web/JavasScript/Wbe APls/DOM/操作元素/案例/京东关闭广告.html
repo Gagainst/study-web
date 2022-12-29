@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            margin:100px auto;
+        }
+        .ewm {
+            width: 150px;
+        }
+        .xxbox{
+            position: relative;
+        }
+        .xx {
+            position: absolute;
+            bottom: 115px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="xxbox">
+            <img src="../images/xx.jpg" alt="" class="xx">
+        </span>
+        <img src="../images/ewm.jpg" alt="" class="ewm">
+    </div>
+    <script>
+        //获取元素
+        var img = document.querySelector('.xx');
+        var box =  document.querySelector('.box');
+        console.log(img,box);
+        //注册事件 程序处理
+        img.onclick =  function(){
+            box.style.display='none';
+        }
+    </script>
+</body>
+</html>

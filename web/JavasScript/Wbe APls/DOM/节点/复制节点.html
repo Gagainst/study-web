@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        //复制节点 子节点.cloneNode(); 括号为空 则为flaes 只有元素没有内容 如果括号里面为true 有元素也有内容 
+       var ils =ul.children[0].cloneNode(true);
+       ul.insertBefore(lis);  
+    </script>
+</body>
+</html>

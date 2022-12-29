@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 本地服务器引入文件 -->
+    <script src="../jQuery/jquery-3.6.1.js"></script>
+    <!-- 外部服务器引入文件 -->
+    <!-- <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.js"></script> -->
+    <script>
+        /*
+            jQuery中的$是核心函数，jQuery所有的函数都要使用$来调用
+                核心函数的功能：
+                    1.将他作为工具类使用
+                        例如$.isFunction() 来检查是否为函数 
+                            $.isArray()   检查是否为数组
+                                还有很多的函数
+                    2.将他作为函数使用 来根据参数的不同 实现的效果是不同 主要是四种情况
+                        1.函数作为参数传递的时 
+                            先让document文档先加载 在执行函数里面的程序
+                            类似 window.onload
+                        2.选择器字符串作为参数传递的时
+                            jQuery 会自动查找元素
+                            类似document.querySelector()
+        */
+        // let fun = function() {};
+        //是函数就返回ture 否则返回flase
+        //  $.isFunction(fun)
+        //  $.isArray()
+        $(function(){
+            
+        })
+       
+    </script>
+</head>
+<body>
+    <div class="box1"></div>
+    <button class="btn"></button>
+</body>
+</html>

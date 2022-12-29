@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //转换为字符串型
+        var a = 1;
+        console.log(a + ''); //和字符串连接都是会转换为字符串类型
+        //转换为数字型 （重点）
+        //语法：parseInt()
+        console.log(parseInt('123')); //可以把字符型转换为数字型 取的是整数
+        console.log(parseInt('123px')); //123px px会别去除
+        console.log(parseInt('123.111')); //小数点后面的会别去除
+        //语法：parseFloat()
+        console.log(parseFloat('123.1232')); //可以把字符型转换为数字型 取的是小数
+        console.log(parseFloat('123.22px')); //123px px会别去除
+        console.log(parseFloat('46')); //如果转换的值是整数 那么显示的也是整数
+        //案例1
+        var age = prompt('请问你是那年出生的呢？');
+        alert(2020 - parseInt(age) + '岁');
+        //案例2
+        var nub1 = prompt('请输入第一个值');
+        var nub2 = prompt('请输入第二个值');
+        alert(parseFloat(nub1) + parseFloat(nub2));
+        //转换为布尔型
+        console.log(Boolaen(null)); //false
+        console.log(Boolaen(0)); //false
+        console.log(Boolaen(true)); //true
+        console.log(Boolaen(false)); //false
+        //代表空 否定的值会被转为false 其他为true
+        //案例3
+        var myname = prompt('请输入您的姓名:');
+        var age = prompt('请输入您的年龄:');
+        var gender = prompt('请输入您的性别:');
+        parseInt(age);
+        alert('您的姓名' + myname + '\n您的年龄' + age + '\n您的性别' + gender);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

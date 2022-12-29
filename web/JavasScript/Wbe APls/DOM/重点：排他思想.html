@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script>
+        //获取元素
+        var buts = document.getElementsByTagName('button');
+        //buts得到的是伪数组 伪数组是有length长度 里面每个元素 buts[i]
+        for (var i = 0; i < buts.length; i++) {
+            //循环绑定事件 程序处理
+            buts[i].onclick = function () {
+                // 我们先要把里面所有的按钮背景颜色去掉 （干死所有人）
+                for (var i = 0; i < buts.length; i++) {
+                    buts[i].style.backgroundColor = '';
+                }
+                // 然后让当前的元素背景颜色位pink （只留下自己）
+                this.style.backgroundColor = 'pink';
+            }
+        }
+        // 这种排除所有人的思想就是我们的称为 排他思想
+    </script>
+</body>
+
+</html>

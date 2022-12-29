@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //retl 格式在 小括号里面要加...变量名
+        // retl函数返回参数和arguments一样 不一样的是 他返回的是一个数组 
+        var fun = function (...arges) {
+            console.log();
+        }
+        fun(1,23,4,56)
+        //必须要放在小括号里面最后一个 如果不放 则会报错
+        var fun2 = function (a,b,...arges) {
+            console.log(a);
+            console.log(b);
+            console.log(arges);
+        }
+        fun2(1,23,4,56)
+    </script>
+</body>
+</html>

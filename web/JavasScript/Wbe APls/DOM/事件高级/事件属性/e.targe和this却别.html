@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function(event){
+            console.log(event.target);//event.targe 返回触发事件对象（元素）
+            console.log(this);//this 返回绑定事件对象（元素）
+        })
+        //区别 event.targe 触发了谁 就返回谁 this谁绑定了对象 就返回谁
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //for循环语法结构
+        for (初始化变量; 条件表达式; 操作表达式) {
+            //执行语句
+        }
+        //初始化：定义的一个变量 一般是用于计数器
+        //条件：决定每次循环是否继续执行 （终止条件）
+        //操作：用于计数器变量的更新 （递增和递减）
+
+
+        //执行思路
+        for (var i = 100; i >= 1; i--) {
+            console.log('你好');
+        }
+        //1.先执行var i=100; 只执行一次
+        //2.然后执行 i>=1 进行判断是否满足条件， 如果是满足执行console.log('你好'); 如果不满足退出for循环
+        //3.条件满足在执行 i-- （第一轮结束）
+        //4.在执行i>=1判断是否满足条件 如果是满足执行console.log('你好'); 如果不满足退出for循环
+
+
+        //for循环相同数
+        var nub = prompt('数字');
+        for (var i = 1; i <= nub; i++) {
+            console.log(nub);
+        }
+
+        //for循环不相同数
+        for (var i = 1; i <= 100; i++) {
+            console.log('您今年' + i + '岁了');
+        }
+        for (var i = 1; i <= 100; i++) {
+            if (i == 1) {
+                console.log('今年你' + i + '岁，你出生了')
+            }
+            else if (i == 100) {
+                console.log('今年你' + i + '岁，你死了')
+            }
+            else {
+                console.log('您今年' + i + '岁了');
+            }
+        }
+        //案例 1加到100的和
+        var sun = 0;
+        for (var i = 1; i <= 100; i++) {
+            sun = i + sun;
+        }
+        console.log(sun);
+        //1-100的平均数（平均数求法：所以数的和 除以个数）
+        var sun = 0;
+        for (var i = 1; i <= 100; i++) {
+            sun = sun + i;
+        }
+        console.log(sun / 100);
+        //1-100奇数和偶数的和（可以被2整除的是偶数 其他为奇数）
+        var ever = 0;
+        var odd = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                ever += i;
+            }
+            else {
+                odd += i;
+            }
+        }
+        console.log(ever);
+        console.log(odd);
+        //1-100可以被3整除数的和
+        var sun = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                sun += i;
+            }
+        }
+        //要求输入班级人数，之后输入每个学员的成绩 最后打印出该班级总成绩的平均成绩
+        var sun = prompt('请输入班级人数');
+        var nub = 0;
+        for (var i = 1; i <= sun; i++) {
+            var sever = prompt('请输入第' + i + '学生的成绩');
+            nub += parseFloat(sever)
+        }
+        alert('该班级的总分是' + nub);
+        alert('该班级的平居分数是' + nub / sun);
+        for(var i = 0;i<100;i++)
+        {
+            
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

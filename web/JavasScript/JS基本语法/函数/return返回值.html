@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //关键字：return  格式：
+        function 函数名() {
+            return 后面结果;
+        }
+        函数名();
+        //1.函数只是实现某种功能 最终结果需要返回给函数的调用者  通过return来实现 （函数名() = return 后面结果）
+        //2.只要函数遇到return 就会把后面结果返回给函数的调用者
+        //代码
+        function plus(nub, nub2) {
+            return nub + nub2;
+        }
+        console.log(plus(1, 2));
+        //案例 用函数求两个最大的值
+        function getnum(num1, num2) {
+            if (num1 > num2) {
+                return num1;
+            }
+            else {
+                return num2
+            }
+        }
+        console.log(getnum(1, 5));
+        //用函数求两个最大的值（三元表达式）
+        function getnum (maxnub1,maxnub2)
+        {
+            return maxnub1>maxnub2 ? maxnub1 : maxnub2;
+        }
+        console.log(getnum(50,20));
+        //案例 求数组[100,50,30,85,51,20]中的 最大值
+        function getArrMax(arr) {//形参接受的是一个数组
+            var temp =arr[0];
+            for(var i = 0;i<=arr.length;i++) {
+                if(arr[i]>temp) {
+                    temp=arr[i];
+                }
+            }
+            return temp;
+        }
+        console.log(getArrMax([100,50,30,85,51,20]));//实参输入的是数组
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

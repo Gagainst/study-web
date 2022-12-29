@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 600px;
+      text-align: center;
+    }
+
+    .time {
+      width: 150px;
+      height: 150px;
+      border: 1px solid red;
+      float: left;
+      margin-left: 20px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      let time = document.querySelectorAll(".time");
+      for (let i = 0; i < time.length; i++) {
+        time[i].onclick = function () {
+          //常用的方法
+          // this.style.backgroundColor = 'pink';
+          //如果是var定义的i 那么是不会显示的 但是let 是可以的
+          time[i].style.backgroundColor = "pink";
+        };
+      }
+      // 执行过程
+      {
+        let i = 0;
+        time[i].onclick = function () {
+          time[i].style.backgroundColor = "pink";
+        };
+      }
+      {
+        let i = 1;
+        time[i].onclick = function () {
+          time[i].style.backgroundColor = "pink";
+        };
+      }
+      {
+        let i = 2;
+        time[i].onclick = function () {
+          time[i].style.backgroundColor = "pink";
+        };
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <div class="box">
+    <p>点击切换颜色</p>
+    <div class="time"></div>
+    <div class="time"></div>
+    <div class="time"></div>
+  </div>
+</body>
+
+</html>

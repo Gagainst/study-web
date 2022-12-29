@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //随机数 Math.random 返回小数 大于等于0 但是小于(1（0 =< x <1)
+        console.log(Math.random());
+
+
+        //取范围值 随机整数(重点)
+        function getRandom(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 10));
+
+        //随机数取范围
+        for (var i = 0; i < 50; i++) {
+            //0到10随机随机数
+            // console.log(Math.round(Math.random()*10));
+            //1到10之间随机数 console.log(Math.round(Math.random()*(x+n=y))+x); 6-12
+            console.log(Math.round(Math.random() * 6) + 6);
+        }
+
+
+
+        //随机抽取姓名
+        var arr = ["张三", "李四", "王五", "杨六", "刘七"];
+        console.log(arr[getRandom(0, arr.length - 1)]);
+        //随机生成以一个1-10之间的数字 并让用户输入一个数字 大了就提示大了 小了就提示小了 猜对了才退出
+        function getRandom(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var nub = getRandom(1, 10);
+        while (true) {
+            var sun = prompt("请输入一个数 1 - 10之间");
+            if (sun > nub) {
+                alert("猜大了");
+            }
+            else if (sun < nub) {
+                alert("猜小了");
+            }
+            else {
+                alert("恭喜你猜对了");
+                break;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/xhr.gif">
+    <script>
+        var imgs = document.querySelector('img');
+        document.addEventListener('mousemove',function(event){
+            //mousemove 鼠标移动事件 
+            var x = event.pageX;
+            var y = event.pageY;
+            //记住要添加单位 （px）
+            imgs.style.left = x - 30 + 'px';
+            imgs.style.top = y -20 + 'px';
+        })
+    </script>
+</body>
+</html>

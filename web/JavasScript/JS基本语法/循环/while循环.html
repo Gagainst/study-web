@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //while结构
+        while (条件表达式) {
+            //执行语句
+        }
+        // //执行思路：当条件表达式为ture 则执行语句 否则推出循环
+        // //代码体验
+        var nub = 1;
+        while (nub <= 100) {
+            console.log('你好');
+            nub++
+        }
+        //while里面也是要有计数器 和初始化变量  还有有操作表达式 完成计数器的更新 防止死循环
+        //案例：打印人的一生1-100岁
+        //案例：打印一个人的一生1-100
+        var sun = 1;
+        while (sun <= 100) {
+            if (sun == 1) {
+                console.log('这个人' + sun + '岁了');
+            }
+            else if (sun == 100) {
+                console.log('这个人' + sun + '岁了');
+            }
+            else {
+                console.log('这个人' + sun + '岁了');
+            }
+            sun++;
+        }
+        //案例：1-100的和
+        var nub = 0;
+        var sun = 1;
+        while (sun <= 100) {
+            nub += sun;
+            sun++;
+        }
+        console.log(nub);
+        //案例：弹出对话框你爱我吗 如果输入你爱我就结束 否则 一直问
+        var str = prompt('你爱我吗');
+        while (str !== '爱') {
+           str = prompt('你爱我吗');
+        }
+        alert('我也爱你');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

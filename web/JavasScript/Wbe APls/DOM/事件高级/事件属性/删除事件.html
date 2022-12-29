@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs[0].onclick = function(){
+            alert('a');
+            //传统删除事件
+            divs[0].onclick = null;
+        }
+        divs[1].addEventListener('click',fu);   //这个里函数特殊 不用小括号 也是可以调用
+        function fu() {
+            alert('b');
+            //这种方式 之支持IE9 以上的
+            divs[1].removeEventListener('click',fu)
+        }
+    </script>
+</body>
+</html>

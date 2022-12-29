@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //new关键字在执行时会做的四件事                         
+        //1.在内存中创建一个空对象
+        //2.让this指向这个新对象
+        //3.执行构造函数里面的代码，给这个新对象添加属性和方法
+        //4.返回这个新函数（所以构造函数是不用return）
+        function Wd(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.sayhi = function () {
+                console.log("Hi!");
+            }
+        }
+        var hx = new Wd('韩信', 20, '男');
+        console.log(hx.name);
+        hx.sayhi();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

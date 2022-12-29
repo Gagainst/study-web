@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        console.log(location.search);//?uname=andy
+        //第一步 先除去？我们可以用substr('从第几个开始节减' ,'节减到第几个 默认节减到最后一个')
+        var parameter = location.search.substr('1');//uname=andy
+        console.log(parameter);
+        //第二步 用split('=')分割为数组
+        // var sun = parameter.split('=');//['uname','andy']
+        var sun = parameter.substr('6');
+        console.log(sun);
+        var divs = document.querySelector('div');
+        // divs.innerHTML = sun[1];
+        divs.innerHTML=sun + '欢迎您！';
+    </script>
+</body>
+</html>

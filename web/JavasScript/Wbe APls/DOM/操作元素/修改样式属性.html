@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>点一下</button>
+    <script>
+        //获取元素
+        var div = document.querySelector('div')
+        //注册事件  程序处理
+        div.onclick = function(){
+            //js里面定义的属性 是行内元素 权重比在style里面的要搞 采用的也是驼峰命名法
+            this.style.backgroundImage='linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%)';
+            this.style.width='300px';
+            this.style.height='300px';
+        }
+        //获取当前样式getComputedStyle() 使用getComputedStyle()的时候 我们要进行调用对象
+        //语法：getComputedStyle(属性名,null) 属性名.样式名
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            var gcs = getComputedStyle(div,null);
+            alert(gcs.width)
+        };
+    </script>
+</body>
+</html>

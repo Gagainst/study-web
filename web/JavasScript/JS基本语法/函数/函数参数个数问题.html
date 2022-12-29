@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //实参 = 形参 （输出正确结果）
+        function plus (nub,nub2) {
+            console.log(nub+nub2);
+        }
+        plus(1,2);//结果为3
+        //实参 < 形参（多的形参值为undefined ）
+        function plus (nub,nub2) {
+            console.log(nub+nub2);
+        }
+        plus(1);//值为NaN 因为多的形参值为undefined  undefined加上数值类型都是为NaN
+        //实参 > 形参 （只取到形参个数）
+        function plus (nub,nub2) {
+            console.log(nub+nub2);
+        }
+        plus(1,2,2);//值为3
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

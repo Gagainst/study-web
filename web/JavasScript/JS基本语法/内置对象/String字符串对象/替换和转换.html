@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 替换 str.replace('被替换','替换为')
+        var str = '1,2,3,4,1';
+        console.log(str.replace('1', 'red'));//值替换第一个 
+        //如果要多个进行替换
+        while (str.indexOf(1) !== -1) {
+            str = str.replace('1', 'red');
+        }
+        console.log(str);
+        //字符串转换为数组 str1.split('分隔符')（join：数组转换为字符串）
+        var str1 = '1,2,3,4';
+        console.log(str1.split(','));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

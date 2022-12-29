@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /*
+                全选按钮
+                    点击之后选择全部
+                    当checked true的时候itmes全部选中 
+                    
+            */
+            var checkAllBtn = document.getElementById('checkAllBtn');
+            var checkNoBtn = document.getElementById('checkNoBtn');
+            var checkRevBtn = document.getElementById('checkRevBtn');
+            var sendBtn = document.getElementById('sendBtn');
+            var checkAllBox = document.getElementById('checkAllBox');
+            var itmes = document.getElementsByName('itmes');
+            // console.log(checkAllBtn.checked);
+            /*
+               全选按钮
+                   点击之后选择全部
+                   当checked true的时候itmes全部选中 
+                   
+           */
+            checkAllBtn.onclick = function () {
+                for (var i = 0; i < itmes.length; i++) {
+                    itmes[i].checked = true;
+                };
+                checkAllBox.checked = true;
+            };
+            //全不选 当checked为false 则全部不选择
+            checkNoBtn.onclick = function () {
+                for (var i = 0; i < itmes.length; i++) {
+                    itmes[i].checked = false;
+                };
+                checkAllBox.checked = false;
+            };
+            //反选checkRevBtn 我们可以使用if进行判断 如果为true 则让checked 为false 
+            checkRevBtn.onclick = function () {
+                for (var i = 0; i < itmes.length; i++) {
+                    if (itmes[i].checked == true) {
+                        itmes[i].checked = false;
+                    } else {
+                        itmes[i].checked = true;
+                    }
+                };
+            };
+            //提交按钮 sendBtn 我们可以使用if进行判段 如果checked 为true 则将他的value值打印出来
+            sendBtn.onclick = function () {
+                for (var i = 0; i < itmes.length; i++) {
+                    if (itmes[i].checked == true) {
+                        alert(itmes[i].value);
+                    }
+                };
+            };
+            // 全选/全不选按钮 
+            checkAllBox.onclick = function () {
+                for (var i = 0; i < itmes.length; i++) {
+                    // if(checkAllBox.checked == true){
+                    //     itmes[i].checked = true;
+                    // }else{
+                    //     itmes[i].checked = false;
+
+                    // }
+                    //谁绑定了事件 this就是谁
+                    itmes[i].checked = this.checked;
+                };
+            };
+            // 给每个itmes绑定onclick单机事件 
+            for (var i = 0; i < itmes.length; i++) {
+                itmes[i].onclick = function () {
+                    checkAllBox.checked = true;
+                    for (var j = 0; j < itmes.length; j++) {
+                        if (itmes[j].checked == false) {
+                            checkAllBox.checked = false;
+                        }
+                    }
+                    
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <form action="">
+        你喜欢那个？<input type="checkbox" id="checkAllBox"> 全选/全不选
+        <br>
+        <input type="checkbox" name="itmes" value="足球"> 足球
+        <input type="checkbox" name="itmes" value="篮球"> 篮球
+        <input type="checkbox" name="itmes" value="羽毛球"> 羽毛球
+        <input type="checkbox" name="itmes" value="乒乓球"> 乒乓球
+        <br>
+        <input type="button" id="checkAllBtn" value="全选">
+        <input type="button" id="checkNoBtn" value="不全选">
+        <input type="button" id="checkRevBtn" value="反选">
+        <input type="button" id="sendBtn" value="提交">
+    </form>
+</body>
+
+</html>

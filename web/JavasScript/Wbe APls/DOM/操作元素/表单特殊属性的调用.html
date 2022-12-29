@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <input type="text" value="请输入">
+    <script>
+        //获取元素
+        var but = document.querySelector('button');
+        var input = document.querySelector('input');
+        //注册事件 程序处理
+        but.onclick = function(){
+            // input.innerHTML = '被点击了'; innerHTML只可以处理普通的盒子
+            input.value = '被点击了'; //表单里面的内容 要用  value 来处理
+            //如果我们想要这个按钮点击后不能使用   disabled 禁用 按钮button(常用)
+            //but.disabled = true;
+            this.disabled= true;//this 是指向事件函数调用者 这里的调用者是but
+        }
+    </script>
+</body>
+
+</html>

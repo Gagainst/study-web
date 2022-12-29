@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inof {
+            width: 300px;
+            height: 600px;
+            background-color: chartreuse;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var inof = document.querySelector('#inof');
+            var submit = document.querySelector('#submit');
+            var check = document.querySelector('#check');
+            //onscroll事件 当滚动条 滚动时 触发
+            inof.onscroll = function () {
+                if (parseInt(this.scrollHeight - this.scrollTop) == this.clientHeight){
+                    submit.disabled = false;
+                    check.disabled = false;
+                }
+            }
+
+            
+        };
+    </script>
+</head>
+
+<body>
+    <p id="inof">
+        汉字“文案”（wén àn）是指古代官衙中掌管档案、负责起草文书的幕友,亦指官署中的公文、书信等；在现代，文案的称呼主要用在商业领域，其意义与中国古代所说的文案是有区别的。
+        在中国古代，文案亦作“ 文按 ”。公文案卷。《北堂书钞》卷六八引《汉杂事》：“先是公府掾多不视事，但以文案为务。”《晋书·桓温传》：“机务不可停废，常行文按宜为限日。”
+        唐戴叔伦《答崔载华》诗：“文案日成堆，愁眉拽不开。”《资治通鉴·晋孝武帝太元十四年》：“诸曹皆得良吏以掌文按。”《花月痕》第五一回：“ 荷生 觉得自己是替他掌文案。”
+        旧时衙门里草拟文牍、掌管档案的幕僚，其地位比一般属吏高。《老残游记》第四回：“像你老这样抚台央出文案老爷来请进去谈谈，这面子有多大！”夏衍《秋瑾传》序幕：“将这 阮财富 带回衙门去，要文案给他补一份状子。”
+        文案音译
+        文案英文：copywriter、copy、copywriting
+        文案拼音：wén àn
+        现代文案的概念：
+        文案来源于广告行业，是“广告文案”的简称，由copy
+        writer翻译而来。多指以语辞进行广告信息内容表现的形式，有广义和狭义之分，广义的广告文案包括标题、正文、口号的撰写和对广告形象的选择搭配；狭义的广告文案包括标题、正文、口号的撰写。
+        在中国，由于各个行业发展都相对不够成熟，人员素质也参差不齐，这使得“文案”的概念常常被错误引用和理解。最典型的就是把文案等同于“策划”，其实这是两种差别很大，有着本质区别的工作。只是由于文案人员常常需要和策划人员、设计人员配合工作，且策划人员也需要撰写一些方案，这使得很多人误认为文案和策划就是一回事，甚至常常把策划与文案的工作会混淆在一起（这也和发源于中国的“策划学”发展不够成熟有关）。
+        广告文案
+        广告文案
+        以前大部分企业只有在搞一些大型推广活动、做营销策划、写可行性分析报告等需求量大的项目时，才需要对外寻求合作。以往一般企业都会找策划、广告、文化传媒等公司合作。这些公司一般都有专业的策划、文案、设计团队，经验也相对丰富，但因为业务量大，范围广泛，在针对性方面会较为薄弱。随着社会经济不断发展，对专业文案的要求更加严格，逐渐衍生了一些专注于文字服务的企业。这类企业发展速度很快，大多数都是从工作室形式转型而来，也有从文化传播机构独立出来的。
+        随着中国广告业二十余年的迅猛发展，广告公司的经营范围，操作流程，工作方式都在变化，文案的角色由无闻转为配角，现正昂首阔步走向台面，成为主角，从前一则广告多是由设计出计划，再配图之后，文案轮为完稿，一则广告的计划多是由文案与美工共同完成，然后各自分工。说起文案的地位，日本是从1992年意识到文案的重要性，台湾是1998年。2002年，大陆的一些中大型广告公司的老总几乎都在垂叹，好的文案太少了。好的文案往往愿意扎堆，从全国形式来看，这股潜规则正逐渐由华南广告重镇广州向华东中心上海转移。
+    </p>
+    <input type="checkbox" disabled="disabled" id="check">我已阅读
+    <input type="submit" value="注册" disabled="disabled" id="submit">
+</body>
+
+</html>

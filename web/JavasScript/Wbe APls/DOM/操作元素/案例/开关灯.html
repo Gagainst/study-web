@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 100%;
+            height: 1080px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="box">
+    <button class="butSwitch">开灯/关灯</button>
+</div>
+    <script>
+        var butSwitch = document.querySelector('.butSwitch');
+        var box = document.querySelector('.box');
+        butSwitch.onclick = function(){
+            var temp = true;
+            if(temp==true){
+                box.style.backgroundColor = '#000';
+                butSwitch.innerHTML = '关灯';
+                temp = false;
+            }else {
+                box.style.backgroundColor = '#fff';
+                butSwitch.innerHTML = '开灯';
+                temp = true;
+            }
+        }
+    </script>
+</body>
+</html>

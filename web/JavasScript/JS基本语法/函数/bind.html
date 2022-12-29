@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //bind方法 会返回一个函数  bind决定了参数 就不可以改变参数 this也是
+      function Fun(a, b, c) {
+        console.log(a, b, c);
+        console.log(this);
+      }
+      const obj = {
+        name: "hx",
+      };
+      const newFun = Fun.bind(obj.name, 1, 2, 3);
+      newFun();
+    </script>
+  </body>
+</html>

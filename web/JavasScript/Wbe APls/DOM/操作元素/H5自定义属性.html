@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- H5为了区分自定义属性和其他属性的时候 我们通常在自定义属性前面加 data- -->
+    <div gettime='20' data-time="2" data-list-name="andy"></div>
+    <script>
+        var div = document.querySelector('div');
+        div.setAttribute('data-index',2);//常用的自定义属性 兼容性好
+        console.log(div.getAttribute('data-time'));//获取自定义属性的方法
+        console.log(div.getAttribute('data-list-name'));
+    </script>
+</body>
+</html>

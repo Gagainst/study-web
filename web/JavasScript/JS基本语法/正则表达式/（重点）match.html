@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+    match()：
+        默认情况match只会检查到第一个满足条件的 后面的不执行
+        我们可以使用g（全局匹配模式）来让match检查所有的内容
+        match执行完 返回的是一个数组
+            */
+        var str = '1a2b2c4d5f6g7';
+        var value = str.match(/[a-z]/ig);
+        console.log(Array.isArray(value)) //返回的是一个数组
+        console.log(value);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

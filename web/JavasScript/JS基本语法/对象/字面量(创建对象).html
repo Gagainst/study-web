@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建对面（字面量）：花括号{}里面包含了表达这个具体事务（对象）的属性和方法
+        // var obj={}; 创建了一个空对象
+        var obj = {
+            uneme: '韩信',
+            age: 20,
+            sex: '男',
+            sayHi: function() {
+                console.log('Hi!');
+            }
+        }
+             //（1）里面属性采用键值对的形式  属性名（键）： 属性值（值）
+             //（2）多个属性方法中间用逗号（,）隔开
+             //（3）方法冒号后面跟的是一个匿名函数
+        //使用对象
+            //（1）对象名.属性名 .可以理解为 的
+              console.log(obj.uneme);
+            //（2）对象名['属性名']
+              console.log(obj['sex']);
+            //（3）对象名.属性名()
+            obj.sayHi();
+            //练习
+            var isBoj ={
+                uneme: '可可',
+                type: '阿拉斯加',
+                age: '5岁',
+                color: 'red',
+                skill: function() {
+                    console.log('汪汪汪，演电影');
+                }
+            }
+    </script>
+</head>
+<body>
+</body>
+</html>

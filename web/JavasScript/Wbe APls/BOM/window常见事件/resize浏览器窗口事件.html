@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var divs = document.querySelector('div');
+            //resize 当浏览器窗口放生变化的时候 执行里面代码
+            window.addEventListener('resize', function () {
+                console.log('变化了');
+                console.log(innerWidth);//innerWidth:浏览器窗口的宽度
+                console.log(innerHeight);//innerHeight:浏览器窗口的高度
+                //当div盒子宽度 高度小于800px的时候 隐藏这个盒子
+                if (innerHeight <= 800 && innerWidth <= 800) {
+                    divs.style.display = 'none';
+                }else{
+                    divs.style.display = 'block';
+                }
+            })
+        })
+    </script>
+    <div></div>
+</body>
+
+</html>

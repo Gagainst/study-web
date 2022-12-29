@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //案例一：把任意数组反转过来
+         function reversal(arr) {
+             var newArr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                 newArr[newArr.length] = arr[i]
+             }
+            return newArr;
+        }
+         var arr = reversal([10, 5, 4, 3, 2, 1])
+        console.log(arr);
+        //案例二：封装冒泡排序
+        function sort(arr) {
+               for (var i = 0; i < arr.length - 1; i++) {
+                       for (var j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+             }
+        return arr;
+         }
+        var arr = sort([4, 1, 8, 10, 11])
+        console.log(arr);
+        //案例三：输出一个年份 判断是否是闰年
+        function year(enter) {
+            var a = false
+            if (enter % 4 == 0 && enter % 100 != 0 || enter % 400 == 0) {
+                a = true
+            }
+            return a;
+        }
+        console.log(year(2000));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

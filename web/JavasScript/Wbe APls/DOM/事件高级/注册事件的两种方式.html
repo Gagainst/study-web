@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>传统注册事件</button>
+    <button>监听注册事件</button>
+    <script>
+        var but = document.querySelectorAll('button');
+        //传统注册事件  唯一性 
+        but[0].onclick= function(){
+            alert('aa')
+        }
+        but[0].onclick= function(){
+            alert('aa')
+        }
+        //监听注册事件（推荐使用） 事件类型不要带on  可以添加多个效果 事件必须要带引号 小括号里面是监听器
+        but[1].addEventListener('click',function(){
+            alert('bb');
+        })
+        but[1].addEventListener('click',function(){
+            alert('cc');
+        })
+    </script>
+</body>
+</html>

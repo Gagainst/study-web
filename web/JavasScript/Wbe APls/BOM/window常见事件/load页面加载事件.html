@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var but = document.querySelector('button');
+            but.addEventListener('click', function () {
+                alert('点位');
+            });
+        }
+        //onload可以让你的js代码放在任何地方包括外部文档 但是他只用一次 如果有多个的话 只会执行最后一个
+        // window.onload = function () {
+        //     alert(22);
+        // }
+        //解决方法：
+        window.addEventListener('load', function () {
+            alert('11');
+        });
+        window.addEventListener('DOMContentLoaded', function () {
+            alert('00');
+        });
+        //load: 等页面所有的执行完 包括图片 DOM元素 flash css等等
+        //DOMContentLoaded: 是DOM加载完 不包括图片 flash css 等等 就可以执行 所以执行速度要币load快 用户体验感好
+    </script>
+    <button>点我</button>
+</body>
+
+</html>

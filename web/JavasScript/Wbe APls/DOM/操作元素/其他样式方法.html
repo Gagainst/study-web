@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid yellow;
+            background-color: pink;
+        }
+
+        #box3 {
+            width: 200px;
+            height: 300px;
+            background-color: aqua;
+            overflow: auto;
+        }
+
+        #box4 {
+            width: 150px;
+            height: 600px;
+            background-color: salmon;
+            left: 0;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var box1 = document.getElementById('box1');
+            var btn1 = document.getElementById('btn1');
+            var box4 = document.getElementById('box4');
+            btn1.onclick = function () {
+                /*
+                    clientWidth
+                    clientHeight
+                        这两个元素都可以获取可见高度、宽度
+                        返回值都不带px 可以直接进行运算
+                        只获取元素的宽度和高度 包括内容区和内边距（padding）
+                 */
+                // alert(box1.clientWidth)
+
+                /*
+                    offsetWidth
+                    offsetHeight
+                        这两个元素都可以获取整个的高度、宽度包括内容区、内边距、边框
+                        返回值都不带px 可以直接进行运算
+                        只获取元素的宽度和高度 
+                */
+                // alert(box1.offsetWieth)
+
+
+                /*
+                    offsetParent
+                        可以获取当前定位父元素
+                        获取的离他最近的父元素 而且是绑定了定位
+                */
+                //    var op = box1.offsetParent;
+                //    alert(op)
+
+
+
+                /*
+                    offsetLeft
+                        返回的是相当于定位父元素的水平偏移量
+                    offsetTop
+                        返回的是相当于定位父元素的垂直偏移量
+                */
+                // alert(box1.offsetLeft)
+
+                /*
+                    scrollWidth
+                    scrollHeight
+                     可以获取整个滚动区的高度和宽度
+                */
+                // alert(box4.scrollHeight)
+
+                /*
+                    scrollLeft
+                    scrollTop
+                     可以获取滚动条的滚动距离
+                */
+                // alert(box4.scrollTop)
+                // alert(box4.clientHeight) //600
+                // alert(box4.scrollHeight-box4.scrollTop)
+                // 如果相等 就证明到底了box4.scrollHeight-box4.scrollTop == box4.clientHeight
+                // 但是 box4.scrollHeight-box4.scrollTop 他会返回一个小数 所有要进行取整
+
+
+                // getComputedStyle() 获取当前选中元素的属性值 注意返回的值是带px的
+                // 如果元素不带被选中的属性 那么将返回auto 所有一般我们都会定义被选中的元素
+                var a =  getComputedStyle(box4,null)['left'];
+                 console.log(a)
+            } 
+            clearInterval(times);
+            times = setInterval(function () {
+                var oldValue = parseInt(getComputedStyle(nema, null)['left']);
+                var newValue = oldValue + speed;
+                //如果向右移动那么
+                if (spend > 0 && newValue > target || speed < 0 && newValue < target) {
+                    newValue = target;
+                };
+                nema.style.left = newValue + 'px';
+                if (newValue == target) {
+                    clearInterval(times);
+                }
+                p.innerHTML = 'nema' + '盒子移动了' + oldValue + '像素';
+            }, 100);
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box3">
+        <div id="box4"></div>
+    </div>
+    <br>
+    <div id="box2" style="position: relative;">
+        <div id="box1"></div>
+    </div>
+    <br>
+
+    <button id="btn1">点一下</button>
+</body>
+
+</html>

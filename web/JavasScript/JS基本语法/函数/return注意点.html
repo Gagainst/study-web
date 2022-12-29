@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //return终止函数：return后面的代码是不会执行了
+        function stysum(nub1, nub2) {
+            return nub1 + nub2;
+            alert('韩信')//因为前面return终止了后面的alert('韩信') 所以不会执行
+        }
+        console.log(stysum(1, 5));
+
+        //return只可以返回一个值
+        function stysum(nub1, nub2) {
+            return nub1, nub2;//返回结果是最后一个值 所以值为5 
+        }
+        console.log(stysum(1, 5));
+        //return里面有值则返回后面的值 
+        function fu () {
+            return 123;
+        }
+        console.log(fu());//值为123
+        //return没有值 则返回undefined
+        function fu () {
+            return ;
+        }
+        console.log(fu());//值为undefined
+       
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

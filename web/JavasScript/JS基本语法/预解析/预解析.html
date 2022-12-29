@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //预解析：js引擎执行过程分为两个步骤：预解析  代码执行
+        console.log(num);//值为：undefined
+        var num = 10;
+        // //相当于执行了
+        // //变量预解析:就是把所有的变量声明提升到当前作用域的最前面（不提升赋值）
+        var num;
+        console.log(num);
+        num = 10;
+
+        // //函数预解析：就是把所有的函数声明提升到当前作用域的最前面（不进行调用）
+        fun();
+        var fun = function () {
+            console.log(num);
+        }
+        //案例
+        fu();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+        function fu() {
+            var a = b = c = 9//相当于var a = 9 b = 9 c = 9，所以b c 是直接赋值的 当全局变量看
+
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        //相当于执行了 
+        function fu() {
+            var a = 9
+            a = b = c
+            console.log(a);//值为9
+            console.log(b);//值为9
+            console.log(c);//值为9
+        }
+        fu();
+        console.log(c);//值为9
+        console.log(b);//值为9
+        console.log(a);//报错：因为a属于局部变量
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //箭头函数(=>): 他可以省略function 
+            /* 语法： 定义函数名 = (参数) =>{
+                    语句体 };*/ 
+
+
+        //重点：箭头函数的this始终是静态的  this返回的是下一个this返回的值
+            // var fun = ()=>{
+            //     console.log(this.name) 
+            // };
+            // let fun2 = function() {
+            //     console.log(this.name)
+            // };
+        //修改window name的值
+            // window.name = '韩信';
+            // var obj = {name: '刘邦'};
+       //直接调用
+            // fun();
+            // fun2();
+        //使用call方法调用
+            // fun2.call(obj);
+        //箭头函数 使用call和apply方法是不会改变this值的
+            // fun.call(obj);
+
+
+        //箭头函数 不可以使用构造函数
+                // var Fun = (name,age)=>{
+                //     this.name = name;
+                //     this.age = age;
+                // }
+                // let a = new Fun('刘德华','18');
+                // console.log(a); 会直接报错
+
+
+        //箭头函数 不可以使用arguments
+                // var fun = ()=>{
+                //     console.log(arguments)
+                // };
+                // fun(1,2,3)
+        //箭头函数 简写 参数有且只有一个 可以省略()
+                // var fun = a =>{
+                //     return a+a;
+                // };
+                // console.log(fun)
+
+                
+        // 函数体 有且有一条 那么可以将花括号进行省略 return也不可以写了 会返回值
+                var fun = b =>b-b;
+                     console.log(fun)
+    </script>
+</body>
+</html>

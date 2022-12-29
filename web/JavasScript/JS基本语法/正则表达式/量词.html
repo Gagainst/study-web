@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+    正则表达式 量词：
+        {n}：表示多少次
+        {n,m}:表示n到m都行
+        {n,}:表示n以上都可以
+        {^n}:开头
+        {n$}:结尾
+        ^开头 &结尾都有 要求严格符合正则表达式
+        n*: 零个 或 多个 {0，}
+        n+:至少要有一个  {1}
+*/
+        var reg = /a{3}/;
+        reg = /a{3,}/;
+        reg = /a{0,10}/;
+        reg = /a{^a}/;
+        reg = /a{a$}/;
+        // console.log(reg.test("aaaaa"))
+        /*
+        案例 判断一个手机号是否符合标准
+            第一位必须是1  ^1
+            第二位 不可以是0 1 2 [3-9] 其他必须是数字[0-9]
+            长度不可以小于 大于 11位 {9}
+        */
+        var phone = "18974134139";
+        var reg = /^1[3-9][0-9]{9}$/;
+        console.log(reg.test(phone))
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

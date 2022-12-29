@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            this的四种情况
+                1.当以函数调用的情况下，this永远都是window
+                2.当以方法调用的情况下，this是调用方法的那个对象
+                3.当以构造函数的情况下，this是新创建的对象
+                4.当以call和apply方法调用的情况下，this是指向的那个对象
+        */
+
+
+                //1.当以函数调用的情况下，this永远都是window
+                function fun() {
+                    console.log(this)
+                }
+                fun();//输出的是window这个全局对象
+
+
+                // 2.当以方法调用的情况下，this是调用方法的那个对象
+                var obj = {
+                    name:'韩信',
+                    sayName: function () {
+                        console.log(this); //结果是obj这个对象
+                    }
+                };
+                obj.sayName();
+                
+                // 3.当以构造函数的情况下，this是新创建的对象
+                function People(name,age,gender) {
+                    this.name = name,// 这里的this就是peo
+                    this.age = age,
+                    this.gender = gender
+                    this.sayName = function() {
+                        console.log(name)
+                    }
+                }
+                var peo = new People('韩信',18,'男');
+                console.log(peo.name);
+
+
+                // 4.当以call和apply方法调用的情况下，this是指向的那个对象
+                var obj2 = {
+                    name:'项羽',
+                    sayName: function () {
+                        console.log(this); //结果是obj这个对象
+                    }
+                };  var obj3 = {
+                    name:'刘邦',
+                    sayName: function () {
+                        console.log(this); //结果是obj这个对象
+                    }
+                };
+                function fun() {
+                    console.log(this) 
+                }
+                //这里的obj和obj2就是fun函数里面的this
+                fun.apply(obj2);
+                fun.call(obj3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

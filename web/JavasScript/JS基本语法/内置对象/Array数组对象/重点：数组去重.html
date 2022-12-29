@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            var arr = ['q','a','q','b','c','c','a'];
+            var newarr = [];
+            for(var i = 0;i<arr.length;i++){
+                if(newarr.indexOf(arr[i]) == -1)//等于-1的时候 证明是没有这个元素 放到新数组里面
+                {
+                    newarr.push(arr[i]);//主要还是用这种
+                    //newarr[newarr.length] = arr[i];
+                }
+            }
+            console.log(newarr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

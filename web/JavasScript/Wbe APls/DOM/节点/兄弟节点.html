@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="dome">
+    <span>123</span>
+</div>
+    <script>
+        var dome = document.querySelector('.dome');
+         //获取上一个兄弟节点 会获取所以的元素节点 文本节点
+        console.log(dome.previousSibling);
+        console.log(dome.previousElementSibling);//获取元素节点 但是有兼容性问题 ie9才支持
+        //获取下一个兄弟节点 会获取所以的元素节点 文本节点
+        console.log(dome.nextSibling);
+        console.log(dome.nextElementSibling);//获取元素节点 但是有兼容性问题 ie9才支持
+        //解决方法
+        function getNextElementSibling (element) {
+            var el = element;
+            while(el=el.nextSibling){
+                if(el.nodeType === 1){
+                    return el;
+                }
+            }
+            return null;
+        }
+        console.log(getNextElementSibling(dome.nextSibling));
+    </script>
+</body>
+</html>

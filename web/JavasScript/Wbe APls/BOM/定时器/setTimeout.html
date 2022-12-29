@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //语法格式 window.setTimeout(函数,倒计时);
+        //1.window是可以省略的
+        //2.setTimeout 只可以使用一次 相对于炸弹爆炸 就没了
+        //3.时间单位是毫秒 1000毫秒=1秒 不用跟单位
+        //4.页面中一般有很多的定时器 我们一般会给定时器一个名字
+        //5.这个变量会返回一个数值 第一个定时器返回的是1 第二个返回的是2 .....
+        function time () {
+            console.log('到时间了');
+        }
+       var time1= setTimeout(time,2000);
+       var time2= setTimeout(time,3000);
+    </script>
+</body>
+</html>

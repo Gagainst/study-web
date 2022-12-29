@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = new Object();//创建了一个空对象
+        obj . uname="韩信";
+        obj . age = 18;
+        obj . sex="男";
+        obj . sayhi = function() {
+            console.log("hi!");
+        }
+        //1 利用等号（=）赋值的方法添加对象属性和方法
+        //2 每个属性和方法之间用分号隔开
+        console.log(obj.uname);
+        console.log(obj["sex"]);
+        obj.sayhi(); 
+        //练习
+        var obj = new Object();
+        obj . uname= "漩涡鸣人";
+        obj . sex = "男";
+        obj . age = 18;
+        obj . skill = function() {
+            console.log("影分身之术");
+        }
+        console.log(obj.uname);
+        console.log(obj.sex);
+        console.log(obj.age);
+        obj.skill();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //双重for循环结构
+        for (外初始化变量; 外条件表达式; 外操作表达式) {
+            //执行语句
+            for (内初始化变量; 内条件表达式; 内操作表达式) {
+                //执行语句
+            }
+        }
+        //执行思路：外部执行一次 内部执行全部
+        //i执行一次的时候 j要执行到跳出for循环 然后i执行第二次 j在执行到跳出for循环
+        for (var i = 1; i <= 3; i++) {
+            console.log('外部循环第' + i + '次');
+            for (var j = 1; j <= 3; j++) {
+                console.log('内部循环第' + j + '次');
+            }
+        }
+        //案例 打印五行五列 *
+        var str = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5; j++) {
+                str = str + '*';
+            }
+            str = str + '\n';//加\n是换行
+
+        }
+        console.log(str);
+        //案例 打印倒三角
+        var str = '';
+        for (var i = 1; i <= 10; i++) {
+            for (var j = i; j <= 10; j++) {//当i=1的时候 j打印10次 当i=2 j打印9次
+                str = str + '*'
+            }
+            str = str + '\n';
+        }
+        console.log(str);
+       //案例 打印出九九乘法表
+       var str = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+               str += j+'×'+i+'='+i*j+'\t'
+            }
+            str+='\n'
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

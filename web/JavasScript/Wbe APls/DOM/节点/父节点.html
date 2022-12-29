@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="maxbox">
+        <div class="box">
+            <span class="ww">XXX</span>
+        </div>
+    </div>
+    <script>
+        //父节点ww.parentNode
+        var ww = document.querySelector('.ww');
+        // var box = document.querySelector('.box'); 我们之前使用的
+        // 只可以获取最近的父节点  如果找不到 就返回 null
+        console.log(ww.parentNode);
+    </script>
+</body>
+
+</html>

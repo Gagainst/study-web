@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+    Y8412 @ . 163 . com  . cn 
+     [a-z 0-9]{6,} @ \. [a-z 0-9] \.[a-z]{2,3}{1,}
+*/
+        var email = 'Y8412@163.com.cn';
+        var emailReg = /^\w{3,}(\.\w+)*@[a-z 0-9]+(\.[a-z]{2,3}){1,2}$/i;
+        console.log(emailReg.test(email));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

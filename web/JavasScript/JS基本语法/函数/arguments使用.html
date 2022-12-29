@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //arguments：当我们不确定有多少参数传递时 可以用argument来获取，只有函数才有arguments
+
+        function fu() {
+            console.log(arguments);//里面存储所以传递过来的实参
+            console.log(arguments.length);
+            //用遍历数组获取arguments里面的值
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        fu(1, 2, 3);
+        //argument是伪数组：
+        //1.具有数组length属性
+        //2.按照下标方式进行存储
+
+        //案例：用argument求任意数最大值
+        function getMax() {
+            var temp = arguments[0];
+            for (var i = 0; i <= arguments.length; i++) {
+                if(arguments[i]>temp) {
+                    temp=arguments[i];
+                }
+            }
+            return temp;
+        }
+       console.log(getMax(1, 20, 51, 87, 95, 50));
+       console.log(getMax(1,2,3,4));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

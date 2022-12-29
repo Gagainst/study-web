@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding: 100px;
+        }
+        textarea {
+            width: 200px;
+            height: 150px;
+            border: 1px solid pink;
+            outline: none; /*取消点击边框*/
+            resize: none; /*取消文本框拉大缩小*/
+        }
+        ul{
+            margin-top: 10px;
+        }
+        li {
+            width: 200px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <textarea></textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+    <script>
+        //获取元素
+        var ul = document.querySelector('ul');
+        var but = document.querySelector('button');
+        var text = document.querySelector('textarea');
+        //注册事件 代码执行
+        but.onclick = function() {
+            if(text.value == ''){
+                alert('请输入!');
+                return false;
+            }else{
+                //创建元素
+                var li = document.createElement('li');
+                li.innerHTML = text.value;
+                //添加元素
+                ul.insertBefore(li,ul.children[0]);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //如果实参没有传递值 那么我们执行形参变量自己赋的值 
+        // 如果实参有则返回实参传递的值
+        var fun = function({a = 10,b,c}) {
+            console.log(a); 
+        };
+        fun({b:20,c:30})
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let name = '韩信';
+            let age = 18;
+            let setName = function() {
+                console.log(name);
+            }
+            let obj = {
+                //直接添加属性名和方法名
+                name,
+                age,
+                setName,
+                //可以不用写function和: 
+                setAge() {
+                    console.log(age);
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

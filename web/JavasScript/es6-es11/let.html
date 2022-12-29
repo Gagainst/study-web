@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        //let声明关键字和var类似
+        let a = 10;
+        let c = 0,
+          b = 10,
+          o = [];
+          c = 20;
+         console.log(c)
+
+        // let 不可以重复声明变量
+        //  let v = 10;
+        //  let v = 20;
+
+
+        // 块级作用域 全局，函数，eval
+            // 块级作用域包括 if for whlie else 
+            // {
+            //     let p = 1;
+            // }
+            // console.log(p); 会报错
+
+        //没有变量提升 会直接报错
+        // console.log(cc)
+        // let cc = 10;
+
+        //不影响作用域链
+        // {
+        //     let l = 10;
+        //     function fun () {
+        //         console.log(l)
+        //     }
+        //     fun();
+        // }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

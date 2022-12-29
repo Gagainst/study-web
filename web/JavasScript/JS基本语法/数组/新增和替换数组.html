@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //新增数组 方法1：修改length数组长度
+        var arr = [1, 2, 3];
+        arr.length = 5;//把length长度修改为5 里面就会有5个数组元素
+        console.log(arr[4]);//值为undefined  因为arr数组元素只有3个 但是我们把数组元素修改为5 后面两个数组是没有给值的 所以值为undefined
+        
+        //新增数组 方法2：修改下标
+        var arr1 = [1, 2, 3];
+        arr1[3] = 4;//上面只有3个值  可以直接加第四个值
+        console.log(arr1);
+        arr1[3] = '韩信';//可以直接修改数组元素
+        console.log(arr1[3]); //案例：存放1-100个数组元素
+        var arr = [];
+        for (var i = 0; i <= 100; i++) {
+            arr[i] = i + 1;
+        }
+        console.log(arr);
+
+
+        //案例：把数组[10,5,84,55,74,2,1]大于等于10的数组放到 新的数组里面
+        var arr = [10, 5, 84, 55, 74, 2, 1, 855];
+        var arr1 = [];
+        var j = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                arr1[j] = arr[i]//新数组下标要从0开始  解决方案：可以先给为0的变量j 然后让j每结束一次循环就加1（j++）
+                j++;
+            }
+        }
+        console.log(arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

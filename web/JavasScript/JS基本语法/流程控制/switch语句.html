@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //switch语句结构
+        switch (条件表达式) {
+            case 条件表达式对应值1:
+                //执行语句
+                break;
+            case 条件表达式对应值2:
+                //执行语句
+                break;
+                //.....
+            default:
+                //最后执行语句
+        }
+        //switch语句注意：
+        //case后面要加一个空格 我们在实际开发条件表达式一般是写变量
+        //条件表达式和case里面的值必须是全等才不会报错   值和数据类型都是一样的
+        //如果当前case没有break 会执行下一个 直到有break才结束
+        //案例1
+        var fruit = prompt('请输入水果名称');
+        switch (fruit) {
+            case '榴莲':
+                alert('10/斤')
+            case '苹果':
+                alert('3.4/斤')
+                break;
+            default:
+                alert('目前没有')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

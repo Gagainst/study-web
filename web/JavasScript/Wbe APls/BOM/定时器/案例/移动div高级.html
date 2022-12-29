@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box1 {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            position: absolute;
+        }
+    </style>
+    <!-- 引入外部文件animation1.js这个文件 -->
+    <script src="../../../../toolKit/animation1.js"></script>
+    <script>
+        window.onload = function () {
+            var box1 = document.querySelector('.box1');
+            var btn1 = document.querySelector('.btn1');
+            var btn2 = document.querySelector('.btn2');
+
+            btn1.onclick = function () {
+                move(box1, 800, 10)
+
+            };
+            btn2.onclick = function () {
+                move(box1, 400, 10, 'width', function () {
+                    move(box1, 400, 10, 'height', function () {
+                        move(box1, 150, 10, 'width', function () {
+                            move(box1, 150, 10, 'height', function () {
+
+                            })
+                        })
+                    })
+                })
+
+            };
+        };    
+       
+    </script>
+</head>
+
+<body>
+    <button class="btn1">向右移动</button>
+    <button class="btn2">向左移动</button>
+    <br> <br>
+    <div class="box1"></div>
+</body>
+
+</html>

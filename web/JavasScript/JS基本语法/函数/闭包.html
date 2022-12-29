@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+    闭包：
+        闭包就是可以访问到外部作用域链的函数
+    应用场景：
+        我们不想被查看的内容，就可以使用闭包
+    构成闭包的要素：
+        1.函数嵌套
+        2.内部函数要引用外部函数的变量
+        3.内部函数要作为返回值返回
+    闭包的生命周期：
+        开始：在外部函数调用一次 闭包就产生一个闭包 第一次产生的闭包和第二次产生的闭包互不影响
+        结束：当内部函数丢失的时候 那么闭包就结束
+ */
+      function fun() {
+        let num = 0;
+        return {
+          fun1: () => {
+            num++;
+            console.log(num);
+          },
+        };
+      }
+      function fun3() {
+        return fun().fun1();
+      }
+      fun3();
+    </script>
+  </body>
+</html>

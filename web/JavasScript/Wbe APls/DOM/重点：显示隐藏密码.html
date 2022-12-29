@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 300px;
+            margin: 100px auto;
+            border-bottom: 1px solid #ccf;
+
+        }
+        input {
+            width: 285px;
+            height: 30px;
+            border: none;
+            outline: none;
+        }
+        img {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./操作元素/images/b.png" alt="">
+        <label for=""></label>
+        <input type="password">
+        <script>
+            //获取元素
+            var img = document.querySelector('img');
+            var input = document.querySelector('input');
+            //注册事件 程序处理 
+            //fale点击一次 必须要变化    当我们要 重复点击显示不同效果 的时候 我们可以采用这种方式完成
+            var fale = 0;
+            img.onclick = function(){
+                if(fale==0){
+                    img.src='./操作元素/images/z.png';
+                    input.type = 'text';
+                    fale=1;
+                }else{
+                    img.src='./操作元素/images/b.png';
+                    input.type = 'password';
+                    fale=0;
+                }
+               
+            }
+        </script>
+    </div>
+</body>
+</html>

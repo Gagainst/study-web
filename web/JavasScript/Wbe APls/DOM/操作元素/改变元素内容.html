@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 25px;
+            border: 1px black solid;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>显示当前时间</button>
+    <div></div>
+    <script>
+        //div.innerHTML: 可以修改元素内容
+        var but = document.querySelector('button');
+        var div = document.querySelector('div');
+        but.onclick = function(){
+            div.innerHTML = getTime();
+        }
+        function getTime() {
+            var time = new Date;
+            var y = time.getFullYear();
+            var m = time.getMonth(m + 1);
+            var d = time.getDate();
+            var arrDay = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六']
+            var a = time.getDay();
+            return y + '年' + m + '月' + d + '日' + arrDay[a];
+        }
+    </script>
+</body>
+</html>
